@@ -52,6 +52,8 @@ http://localhost:8080/filter/glass?glass=Champagne_flute
 Filter by category
 http://localhost:8080/filter/category?category=Ordinary_Drink
 
+Tip: Filter by multiple things like so:
+http://localhost:8080/filter/glass?glass=Champagne_flute&glass=Cocktail_glass
 
 Random Endpoint
 http://localhost:8080/random
