@@ -14,3 +14,5 @@ require('./models/ingredient')
 app.use(require('./routes'));
 
 app.listen(8080)
+
+module.exports = app;

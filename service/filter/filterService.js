@@ -8,8 +8,12 @@ const cocktailService = require('../cocktailService');
 //TODO: Make this DRY-er
 
 function ingredientFilter(req, res) {
-    ingredientList = Array.isArray(req.query.ingredient) ? req.query.ingredient : [req.query.ingredient];
-    multiIngredient(ingredientList, res, []);
+    if(req.query.ingredient) {
+        ingredientList = Array.isArray(req.query.ingredient) ? req.query.ingredient : [req.query.ingredient];
+        multiIngredient(ingredientList, res, []);
+    } else {
+        res.send({drinks: []});
+    }
 }
 
 function multiIngredient(ingredientList, res, results) {
@@ -52,8 +56,12 @@ function multiIngredient(ingredientList, res, results) {
 }
 
 function alcoholicFilter(req, res) {
-    alcoholicList = Array.isArray(req.query.alcoholic) ? req.query.alcoholic : [req.query.alcoholic];
-    multiAlcoholic(alcoholicList, res, []);
+    if(req.query.alcoholic) {
+        alcoholicList = Array.isArray(req.query.alcoholic) ? req.query.alcoholic : [req.query.alcoholic];
+        multiAlcoholic(alcoholicList, res, []);
+    } else {
+        res.send({drinks: []});
+    }
 }
 
 function multiAlcoholic(alcoholicList, res, results) {
@@ -80,8 +88,12 @@ function multiAlcoholic(alcoholicList, res, results) {
 }
   
 function glassFilter(req, res) {
-    glassList = Array.isArray(req.query.glass) ? req.query.glass : [req.query.glass];
-    multiGlass(glassList, res, []);
+    if(req.query.glass){
+        glassList = Array.isArray(req.query.glass) ? req.query.glass : [req.query.glass];
+        multiGlass(glassList, res, []);
+    } else {
+        res.send({drinks: []});
+    }
 }
 
 function multiGlass(glassList, res, results) {
@@ -108,8 +120,12 @@ function multiGlass(glassList, res, results) {
 }
 
 function categoryFilter(req, res) {
-    categoryList = Array.isArray(req.query.category) ? req.query.category : [req.query.category];
-    multiCategory(categoryList, res, []);
+    if(req.query.category){
+        categoryList = Array.isArray(req.query.category) ? req.query.category : [req.query.category];
+        multiCategory(categoryList, res, []);
+    } else {
+        res.send({drinks: []});
+    }
 }
 
 function multiCategory(categoryList, res, results) {
