@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var uuid = require('node-uuid');
 
 var CocktailSchema = new mongoose.Schema({
-  strId: { type: String, default: function genUUID() { return uuid.v1() }},
+  strId: { type: String, default: function genUUID() { return this._id }},
   strDrink: {type: String},
   strDrinkAlternate: {type: String},
   strTags: {type: String},
