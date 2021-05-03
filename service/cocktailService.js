@@ -44,6 +44,14 @@ function remove(req, res) {
     }
 }
 
+function toCocktailPreview(cocktail) {
+    return {
+        strDrink: cocktail.strDrink,
+        strDrinkThumb: cocktail.strDrinkThumb,
+        idDrink: cocktail.idDrink
+    };
+}
+
 function fillCocktailFromReq(req, c) {
     c.strDrink = req.body.strDrink;
     c.strDrinkAlternate = req.body.strDrinkAlternate;
