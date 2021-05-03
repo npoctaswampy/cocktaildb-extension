@@ -48,7 +48,7 @@ function toCocktailPreview(cocktail) {
     return {
         strDrink: cocktail.strDrink,
         strDrinkThumb: cocktail.strDrinkThumb,
-        idDrink: cocktail.idDrink
+        idDrink: cocktail.strId
     };
 }
 
@@ -103,4 +103,4 @@ function fillCocktailFromReq(req, c) {
 }
 
 
-module.exports = { create, update, remove }
+module.exports = { create, update, remove, toCocktailPreview }

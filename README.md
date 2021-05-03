@@ -1,8 +1,8 @@
 Goals:
 - Duplicate Original Functionality (DONE)
 - Add Create, Update, Delete for Cocktails and Ingredients (DONE)
-- Integrate local stuff into GET endpoints
-- Multiple filtering parameters
+- Integrate local stuff into GET endpoints (DONE for filter)
+- Multiple filtering parameters (DONE for filter)
 
 
 
