@@ -1,3 +1,23 @@
+The Cocktail Project
+
+In this app, we extend the cocktaildb api to include some never-before-seen features. These include:
+
+- Multi-parameter filtering (without having to pay $2 to a Patreon)
+- CRUD operations on both Cocktails and Ingredients
+
+Some useful endpoints are listed below for users running this locally. If you happen to change the connection string for your locally running program, please make sure to update these strings before trying them out!
+
+You can run this project by simply typing `node app.js` in the root directory.
+
+Now for the stuff I didn't get done!
+- Local objects aren't included in search, lookup, or random results. This is something we should work on in the future to extend the app.
+- You cannot filter across different types of arguments. So no mixing Category with Ingredients in the search params. This is something I looked into, and decided the complexity was too high for a 3-day project, and what's here should be good enough to be considered an MVP. 
+- Basic get operations would ideally be included in the CRUD operations, but I'm relying on the filter operations to cover that. In the future, adding local objects to lookup will cover that requirement, and likely code reuse can make that effort negligible. 
+- Error handling. Some basic error handling is present, but is definitely not complete. 
+- In future iterations, we should check that ingredients exist before adding cocktails. 
+- No tests. Ouch. This one really hurts. Future work should be done to abstract out the repository and webservice operations so they can be mocked and tests can be written. This is my first effort with node.js, and testing is quite a lot to learn right now.
+
+
 Goals:
 - Duplicate Original Functionality (DONE)
 - Add Create, Update, Delete for Cocktails and Ingredients (DONE)
