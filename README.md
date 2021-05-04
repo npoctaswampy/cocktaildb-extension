@@ -7,7 +7,7 @@ In this app, we extend the cocktaildb api to include some never-before-seen feat
 
 Some useful endpoints are listed below for users running this locally. If you happen to change the connection string for your locally running program, please make sure to update these strings before trying them out!
 
-You can run this project by simply typing `node app.js` in the root directory.
+You can run this project by simply typing `npm install` and then `node app.js` in the root directory.
 
 Now for the stuff I didn't get done!
 - Local objects aren't included in search or random results. This is something we should work on in the future to extend the app.
