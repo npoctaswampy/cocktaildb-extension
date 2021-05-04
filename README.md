@@ -1,4 +1,4 @@
-The Cocktail Project
+<h1>The Cocktail Project</h1>
 
 In this app, we extend the cocktaildb api to include some never-before-seen features. These include:
 
@@ -23,71 +23,76 @@ Goals:
 - Integrate local stuff into GET endpoints (DONE for filter)
 - Multiple filtering parameters (DONE for filter)
 
-CRUD Enpoints:
+<h2>CRUD Enpoints:</h2>
 POST:
 http://localhost:8080/cocktail
 
 Body fields:
-  strDrink
-  strDrinkAlternate
-  strTags
-  strVideo
-  strCategory
-  strIBA
-  strAlcoholic
-  strGlass
-  strInstructions
-  strInstructionsES
-  strInstructionsDE
-  strInstructionsFR
-  strInstructionsIT
-  strDrinkThumb
-  strIngredient1
-  strIngredient2
-  strIngredient3
-  strIngredient4
-  strIngredient5
-  strIngredient6
-  strIngredient7
-  strIngredient8
-  strIngredient9
-  strIngredient10
-  strIngredient11
-  strIngredient12
-  strIngredient13
-  strIngredient14
-  strIngredient15
-  strMeasure1
-  strMeasure2
-  strMeasure3
-  strMeasure4
-  strMeasure5
-  strMeasure6
-  strMeasure7
-  strMeasure8
-  strMeasure9
-  strMeasure10
-  strMeasure11
-  strMeasure12
-  strMeasure13
-  strMeasure14
-  strMeasure15
-  strImageSource
-  strImageAttribution
-  strCreativeCommonsConfirmed
+  strDrink,
+  strDrinkAlternate,
+  strTags,
+  strVideo,
+  strCategory,
+  strIBA,
+  strAlcoholic,
+  strGlass,
+  strInstructions,
+  strInstructionsES,
+  strInstructionsDE,
+  strInstructionsFR,
+  strInstructionsIT,
+  strDrinkThumb,
+  strIngredient1,
+  strIngredient2,
+  strIngredient3,
+  strIngredient4,
+  strIngredient5,
+  strIngredient6,
+  strIngredient7,
+  strIngredient8,
+  strIngredient9,
+  strIngredient10,
+  strIngredient11,
+  strIngredient12,
+  strIngredient13,
+  strIngredient14,
+  strIngredient15,
+  strMeasure1,
+  strMeasure2,
+  strMeasure3,
+  strMeasure4,
+  strMeasure5,
+  strMeasure6,
+  strMeasure7,
+  strMeasure8,
+  strMeasure9,
+  strMeasure10,
+  strMeasure11,
+  strMeasure12,
+  strMeasure13,
+  strMeasure14,
+  strMeasure15,
+  strImageSource,
+  strImageAttribution,
+  strCreativeCommonsConfirmed,
 
 PUT
+
 http://localhost:8080/cocktail/:id
+
 Same fields as POST
 
 DELETE 
+
 http://localhost:8080/cocktail/:id
+
 No Fields
 
 GET (same functionality as cocktail lookup below)
+
 http://localhost:8080/cocktail/:id
 
-Search Endpoints:
+<h2>Search Endpoints:</h2>
 
 Search by name
 http://localhost:8080/search/cocktail?name=margarita
@@ -99,7 +104,7 @@ Search by ingredient
 http://localhost:8080/search/ingredient?ingredient=Gin
 
 
-Filter Endpoints
+<h2>Filter Endpoints:</h2>
 
 Filter by alcoholic
 http://localhost:8080/filter/alcohol?alcoholic=Non_Alcoholic
@@ -116,11 +121,14 @@ http://localhost:8080/filter/category?category=Ordinary_Drink
 Tip: Filter by multiple things like so:
 http://localhost:8080/filter/glass?glass=Champagne_flute&glass=Cocktail_glass
 
-Random Endpoint
+
+<h2>Random Endpoint:</h2>
+
 http://localhost:8080/random
 
 
-Lookup Endpoints
+<h2>Lookup Endpoints:</h2>
+
 
 Lookup by ingredient
 http://localhost:8080/lookup/ingredient?id=552
