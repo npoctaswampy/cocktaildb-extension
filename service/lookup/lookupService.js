@@ -1,13 +1,20 @@
 
 const got = require('got');
 const { pipeline } = require('stream');
+const cocktailService = require('../cocktailService');
 
 function cocktailLookup(req, res) {
-    const dataStream = got.stream(
+    var id = (req.query.id) ? req.query.id : req.params.id;
+    const dataStream = got(
         'https://www.thecocktaildb.com/api/json/v1/1/lookup.php',
-        {searchParams: {i: req.query.id}}
-    );
-    streamLookup(res, dataStream);
+        {searchParams: {i: id}}
+    ).then(function(cocktail) {
+        if(!cocktail.body) {
+            dbCocktailLookup(id, res);
+        } else {
+            res.send(cocktail.body);
+        }
+    });
   }
 
 function ingredientLookup(req, res) {
@@ -17,6 +24,16 @@ function ingredientLookup(req, res) {
     );
     streamLookup(res, dataStream);
   }
+
+function dbCocktailLookup(id, res) {
+    cocktailService.findById(id, function(cocktail) {
+        if(!cocktail) {
+            res.sendStatus(404);
+        } else{
+            res.send(cocktail);
+        }
+    });
+}
 
 
 function streamLookup(res, dataStream) {
